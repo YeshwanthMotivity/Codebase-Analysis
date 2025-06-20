@@ -1,28 +1,24 @@
-💻 Codebase Analyst
-Codebase Analyst is a GenAI-powered tool that helps developers understand and query complex codebases using natural language. It uses a Retrieval-Augmented Generation (RAG) pipeline and CodeLLaMA to extract and explain code from uploaded repositories intelligently.
+# Codebase Analyst
+ Codebase Analyst is a GenAI-powered tool that helps developers understand and query complex codebases using natural language. It uses a Retrieval-Augmented Generation (RAG) pipeline and CodeLLaMA to extract and  explain code from uploaded repositories intelligently.
 
-🚀 Features
-Natural Language Interaction – Ask questions about your codebase in plain English.
+# Features
+1. Natural Language Interaction – Ask questions about your codebase in plain English.
+2. Context-Aware Answers – Answers are derived directly from your codebase.
+3. Zipped Repository Uploads – Upload your codebase as a .zip file.
+4. Intelligent File Filtering – Skips unnecessary folders like __pycache__, .git, node_modules, etc.
+5. RAG Architecture – Combines retrieval and generation for accurate results.
 
-Context-Aware Answers – Answers are derived directly from your codebase.
-
-Zipped Repository Uploads – Upload your codebase as a .zip file.
-
-Intelligent File Filtering – Skips unnecessary folders like __pycache__, .git, node_modules, etc.
-
-RAG Architecture – Combines retrieval and generation for accurate results.
-
-🛠 Tech Stack
+# Tech Stack
 Layer	Technologies Used
-Frontend	React.js – For building responsive UI
-Backend	Flask – Lightweight Python server
-LLM Engine	CodeLLaMA (via Ollama) – Code understanding
-Vector Search	SentenceTransformers (MiniLM) – Semantic retrieval
-Chunking	Hugging Face Transformers – Token-based splitting
-Infrastructure	Ollama – Lightweight local LLM serving
+1. Frontend	React.js – For building responsive UI
+2. Backend	Flask – Lightweight Python server
+3. LLM Engine	CodeLLaMA (via Ollama) – Code understanding
+4. Vector Search	SentenceTransformers (MiniLM) – Semantic retrieval
+5. Chunking	Hugging Face Transformers – Token-based splitting
+6. Infrastructure	Ollama – Lightweight local LLM serving
 
-✅ Prerequisites
-🔧 Backend (Python)
+# Prerequisites
+1. Backend (Python)
 Python: 3.9+
 
 pip: For installing Python libraries
@@ -33,25 +29,23 @@ Ollama: Local server for CodeLLaMA
 
 ⚠️ Important: Downgrade to Ollama v0.6.8 for compatibility with CodeLLaMA instruction-tuned models.
 
-🧩 Frontend (React)
+2. Frontend (React)
 Node.js
 
 npm
 
 Basic React knowledge
 
-🔍 Verify Installations
-bash
-Copy
-Edit
+3. Verify Installations
+
 python --version      # Should be 3.9+
 pip --version
 node --version
 npm --version
 ollama --version      # Should be v0.6.8
-🗂 Project Structure
-Copy
-Edit
+
+# Project Structure
+
 📂 1M-CODEBASE-ANALYSIST/
 │
 ├── 📂 easycontext_cpu/
@@ -65,55 +59,55 @@ Edit
 │
 ├── 📂 easycontext-frontend/
 │   └── App.js
-⚙️ Setup & Run Instructions
+
+
+# Setup & Run Instructions
+
 1️⃣ Clone the Repository
-bash
-Copy
-Edit
+
 git clone https://github.com/YeshwanthMotivity/Codebase-Analysist.git
+
 cd 1M-CODEBASE-ANALYSIST/
+
 2️⃣ Frontend Setup (React)
-bash
-Copy
-Edit
+
 cd easycontext-frontend
+
 npm install
+
 npm start
+
 App runs on: http://localhost:3000
 
 3️⃣ Ollama Setup
+
 Downgrade Ollama to v0.6.8 (refer to official site/documentation)
 
 Verify Version:
 
-bash
-Copy
-Edit
 ollama --version  # Should return ollama version 0.6.8
+
 Pull & Run CodeLLaMA:
 
-bash
-Copy
-Edit
 ollama pull codellama:7b
-ollama run codellama:7b
-4️⃣ Backend Setup (Flask)
-bash
-Copy
-Edit
-# From project root
-python -m venv venv
-# Activate:
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
 
-# Install dependencies
+ollama run codellama:7b
+
+4️⃣ Backend Setup (Flask)
+
+1. From project root
+   python -m venv venv
+   
+2. Activate:
+   venv\Scripts\activate
+
+3. Install dependencies
 pip install -r requirements.txt
 
-# Run the server
+4. Run the server
+5. 
 python app.py
+
 Flask runs on: http://127.0.0.1:5000
 
 🧠 How to Use
@@ -133,30 +127,19 @@ Enter your question in plain English:
 
 Click "Ask" to submit.
 
-🔁 What Happens Behind the Scenes
-Unzipping: Uploaded zip is extracted.
+# 🔁 What Happens Behind the Scenes
 
-Filtering: Unwanted files are ignored.
-
-Chunking: Code is split using token-based logic.
-
-Embedding: Chunks embedded using MiniLM.
-
-Retrieval: Relevant chunks fetched using cosine similarity + TF-IDF.
-
-Prompt Building: A smart prompt is built.
-
-Answer Generation: Prompt is sent to CodeLLaMA via Ollama.
-
-Response: Final answer is displayed in a user-friendly format.
+1. Unzipping: Uploaded zip is extracted.
+2. Filtering: Unwanted files are ignored.
+3. Chunking: Code is split using token-based logic.
+4. Embedding: Chunks embedded using MiniLM.
+5. Retrieval: Relevant chunks fetched using cosine similarity + TF-IDF.
+6. Prompt Building: A smart prompt is built.
+7. Answer Generation: Prompt is sent to CodeLLaMA via Ollama.
+8. Response: Final answer is displayed in a user-friendly format.
 
 ⏳ Response time depends on codebase size.
 
-📦 Sample Output
-pgsql
-Copy
-Edit
-Q: What does the data_processor.py file do?
-A: The file is responsible for preprocessing the input data before it is fed into the model. It handles missing values, feature encoding, and normalization.
-🧾 License
-This project is licensed under the MIT License. See LICENSE for details.
+# 📬 Contact
+For questions, feedback, or contributions:
+📧 yeshwanth.mudimala@motivitylabs.com
