@@ -1,0 +1,10 @@
+tqdm
+sentencepiece
+scikit-learn
+pandas
+numpy
+transformers==4.39.1
+seaborn
+sentence-transformers
+flask
+flask-cors
