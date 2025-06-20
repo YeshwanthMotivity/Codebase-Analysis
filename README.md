@@ -8,6 +8,9 @@
 4. Intelligent File Filtering – Skips unnecessary folders like __pycache__, .git, node_modules, etc.
 5. RAG Architecture – Combines retrieval and generation for accurate results.
 
+# Architechture
+![p1](https://github.com/user-attachments/assets/0712baf0-5a33-4d8c-8a5e-7579fad58186)
+
 # Tech Stack
 Layer	Technologies Used
 1. Frontend	React.js – For building responsive UI
