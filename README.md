@@ -19,30 +19,23 @@ Layer	Technologies Used
 
 # Prerequisites
 1. Backend (Python)
-Python: 3.9+
-
-pip: For installing Python libraries
-
-Git: For cloning the repo
-
-Ollama: Local server for CodeLLaMA
-
+   Python: 3.9+
+   pip: For installing Python libraries
+   Git: For cloning the repo
+   Ollama: Local server for CodeLLaMA
 ⚠️ Important: Downgrade to Ollama v0.6.8 for compatibility with CodeLLaMA instruction-tuned models.
 
 2. Frontend (React)
-Node.js
-
-npm
-
-Basic React knowledge
+   Node.js
+   npm
+   Basic React knowledge
 
 3. Verify Installations
-
-python --version      # Should be 3.9+
-pip --version
-node --version
-npm --version
-ollama --version      # Should be v0.6.8
+   python --version      # Should be 3.9+
+   pip --version
+   node --version
+   npm --version
+   ollama --version      # Should be v0.6.8
 
 # Project Structure
 
@@ -65,66 +58,48 @@ ollama --version      # Should be v0.6.8
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/YeshwanthMotivity/Codebase-Analysist.git
-
-cd 1M-CODEBASE-ANALYSIST/
+    git clone https://github.com/YeshwanthMotivity/Codebase-Analysist.git
+    cd 1M-CODEBASE-ANALYSIST/
 
 2️⃣ Frontend Setup (React)
 
-cd easycontext-frontend
-
-npm install
-
-npm start
-
-App runs on: http://localhost:3000
+    cd easycontext-frontend
+    npm install
+    npm start
+    App runs on: http://localhost:3000
 
 3️⃣ Ollama Setup
 
-Downgrade Ollama to v0.6.8 (refer to official site/documentation)
+    Downgrade Ollama to v0.6.8 (refer to official site/documentation)
+    Verify Version:
+    ollama --version  # Should return ollama version 0.6.8
 
-Verify Version:
-
-ollama --version  # Should return ollama version 0.6.8
-
-Pull & Run CodeLLaMA:
-
-ollama pull codellama:7b
-
-ollama run codellama:7b
+    Pull & Run CodeLLaMA:
+    ollama pull codellama:7b
+    ollama run codellama:7b
 
 4️⃣ Backend Setup (Flask)
 
 1. From project root
    python -m venv venv
-   
 2. Activate:
    venv\Scripts\activate
-
 3. Install dependencies
-pip install -r requirements.txt
-
+   pip install -r requirements.txt
 4. Run the server
-5. 
-python app.py
-
+5. python app.py
 Flask runs on: http://127.0.0.1:5000
 
 🧠 How to Use
 📤 Upload Codebase
-Click on "Choose File" under "Upload a text file"
-
-Select your .zip codebase
-
-Only relevant files (like .py, .js, .html) will be processed
-
+    Click on "Choose File" under "Upload a text file"
+    Select your .zip codebase
+    Only relevant files (like .py, .js, .html) will be processed
+    
 ❓ Ask a Question
-Enter your question in plain English:
-
-"What is the primary purpose of the project and what components does it use?"
-
-"What does the transform module do?"
-
+   Enter your question in plain English:
+   "What is the primary purpose of the project and what components does it use?"
+   "What does the transform module do?"
 Click "Ask" to submit.
 
 # 🔁 What Happens Behind the Scenes
