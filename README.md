@@ -19,23 +19,23 @@ Layer	Technologies Used
 
 # Prerequisites
 1. Backend (Python)
-   Python: 3.9+
-   pip: For installing Python libraries
-   Git: For cloning the repo
-   Ollama: Local server for CodeLLaMA
-⚠️ Important: Downgrade to Ollama v0.6.8 for compatibility with CodeLLaMA instruction-tuned models.
+   1. Python: 3.9+
+   2. pip: For installing Python libraries
+   3. Git: For cloning the repo
+   4. Ollama: Local server for CodeLLaMA
+   5. ⚠️ Important: Downgrade to Ollama v0.6.8 for compatibility with CodeLLaMA instruction-tuned models.
 
 2. Frontend (React)
-   Node.js
-   npm
-   Basic React knowledge
+   1. Node.js
+   2. npm
+   3. Basic React knowledge
 
 3. Verify Installations
-   python --version      # Should be 3.9+
-   pip --version
-   node --version
-   npm --version
-   ollama --version      # Should be v0.6.8
+   1. python --version      # Should be 3.9+
+   2. pip --version
+   3. node --version
+   4. npm --version
+   5. ollama --version      # Should be v0.6.8
 
 # Project Structure
 
@@ -90,17 +90,16 @@ Layer	Technologies Used
 5. python app.py
 Flask runs on: http://127.0.0.1:5000
 
-🧠 How to Use
-📤 Upload Codebase
-    Click on "Choose File" under "Upload a text file"
-    Select your .zip codebase
-    Only relevant files (like .py, .js, .html) will be processed
+# 🧠 How to Use
+1. 📤 Upload Codebase
+    1. Click on "Choose File" under "Upload a text file"
+    2. Select your .zip codebase (Only relevant files (like .py, .js, .html) will be processed)
     
-❓ Ask a Question
-   Enter your question in plain English:
-   "What is the primary purpose of the project and what components does it use?"
-   "What does the transform module do?"
-Click "Ask" to submit.
+2. ❓ Ask a Question
+   1. Enter your question in plain English:
+      1. "What is the primary purpose of the project and what components does it use?"
+      2. "What does the transform module do?"
+   2. Click "Ask" to submit.
 
 # 🔁 What Happens Behind the Scenes
 
