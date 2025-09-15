@@ -29,7 +29,9 @@
 ### ⚙️ How to Run
 #### Prerequisites
 • Backend (Python): Python 3.9+, pip, and Git.
+
 • Frontend (React): Node.js and npm.
+
 • Ollama: A local Ollama server is required to run CodeLLaMA. Important: You must downgrade to Ollama v0.6.8 for compatibility with the CodeLLaMA instruction-tuned models used in this project.
 
 #### Verify Installations
