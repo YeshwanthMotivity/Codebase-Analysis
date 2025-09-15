@@ -109,14 +109,14 @@ python app.py
 
 ### 🔁 What Happens Behind the Scenes
 
-1. Unzipping: Uploaded zip is extracted.
-2. Filtering: Unwanted files are ignored.
-3. Chunking: Code is split using token-based logic.
-4. Embedding: Chunks embedded using MiniLM.
-5. Retrieval: Relevant chunks fetched using cosine similarity + TF-IDF.
-6. Prompt Building: A smart prompt is built.
-7. Answer Generation: Prompt is sent to CodeLLaMA via Ollama.
-8. Response: Final answer is displayed in a user-friendly format.
+1. **Unzipping**: Uploaded zip is extracted.
+2. **Filtering**: Unwanted files are ignored.
+3. **Chunking**: Code is split using token-based logic.
+4. **Embedding**: Chunks embedded using MiniLM.
+5. **Retrieval**: Relevant chunks fetched using cosine similarity + TF-IDF.
+6. **Prompt Building**: A smart prompt is built.
+7. **Answer Generation**: Prompt is sent to CodeLLaMA via Ollama.
+8. **Response**: Final answer is displayed in a user-friendly format.
 
 ⏳ Response time depends on codebase size.
 
