@@ -118,7 +118,9 @@ python app.py
 
 ⏳ Response time depends on codebase size.
 
+
 ---
-### 📬 Contact
-For questions, feedback, or contributions:
-📧 yeshwanth.mudimala@motivitylabs.com
+## 📬 Contact
+For questions or collaboration, you can reach out at:
+
+**Email 📧** : yeshwanth.mudimala@motivitylabs.com
