@@ -2,7 +2,7 @@
  Codebase Analyst is a GenAI-powered tool that helps developers understand and query complex codebases using natural language. It uses a Retrieval-Augmented Generation (RAG) pipeline and CodeLLaMA to extract and  explain code from uploaded repositories intelligently.
  
 ---
-### Features
+### 🚀 Features
 1. **Natural Language Interaction** – Ask questions about your codebase in plain English.
 2. **Context-Aware Answers** – Answers are derived directly from your codebase.
 3. **Zipped Repository Uploads** – Upload your codebase as a .zip file.
@@ -10,11 +10,11 @@
 5. **RAG Architecture** – Combines retrieval and generation for accurate results.
 
 ---
-### Architechture
+### 🧠 Architechture
 ![p1](https://github.com/user-attachments/assets/0712baf0-5a33-4d8c-8a5e-7579fad58186)
 
 ---
-### Tech Stack
+### 🛠️ Tech Stack
 
 |        Layer       |       Technologies Used          |
 | ------------------ | -------------------------------  |
@@ -26,26 +26,52 @@
 | **Infrastructure** | `Ollama`                         |
 
 ---
-### Prerequisites
-**1. Backend (Python)**
-   1. Python: 3.9+
-   2. pip: For installing Python libraries
-   3. Git: For cloning the repo
-   4. Ollama: Local server for CodeLLaMA
-   5. ⚠️ Important: Downgrade to Ollama v0.6.8 for compatibility with CodeLLaMA instruction-tuned models.
+### ⚙️ How to Run
+#### Prerequisites
+• Backend (Python): Python 3.9+, pip, and Git.
+• Frontend (React): Node.js and npm.
+• Ollama: A local Ollama server is required to run CodeLLaMA. Important: You must downgrade to Ollama v0.6.8 for compatibility with the CodeLLaMA instruction-tuned models used in this project.
 
-**2. Frontend (React)**
-   1. Node.js
-   2. npm
-   3. Basic React knowledge
+#### Verify Installations
+• Make sure all required versions are correctly installed by running the following commands:
+```
+python --version   # Should be 3.9+
+pip --version
+node --version
+npm --version
+ollama --version   # Should be v0.6.8
+```
 
-**3. Verify Installations**
-   1. python --version      # Should be 3.9+
-   2. pip --version
-   3. node --version
-   4. npm --version
-   5. ollama --version      # Should be v0.6.8
-      
+#### Setup & Execution
+• Clone the Repository
+```
+git clone https://github.com/YeshwanthMotivity/Codebase-Analysist.git
+cd 1M-CODEBASE-ANALYSIST/
+
+```
+• Ollama Setup
+First, downgrade Ollama to the required v0.6.8, then pull and run the CodeLLaMA model.
+```
+# Downgrade Ollama (refer to official documentation for your OS)
+ollama pull codellama:7b
+ollama run codellama:7b
+```
+• Frontend Setup (React)
+In a new terminal, set up the frontend. The application will run on http://localhost:3000.
+```
+cd easycontext-frontend
+npm install
+npm start
+```
+• Backend Setup (Flask)
+In a separate terminal, navigate to the project root and set up the Flask server. The server will run on http://127.0.0.1:5000.
+```
+python -m venv venv
+venv\Scripts\activate   # For Windows
+# source venv/bin/activate  # For macOS/Linux
+pip install -r requirements.txt
+python app.py
+```
 ---
 ### Project Structure
 
@@ -64,44 +90,6 @@
 ├── 📂 easycontext-frontend/
 │   └── App.js
 ```
----
-
-### Setup & Run Instructions
-
-1️⃣ Clone the Repository
-
-    git clone https://github.com/YeshwanthMotivity/Codebase-Analysist.git
-    cd 1M-CODEBASE-ANALYSIST/
-
-2️⃣ Frontend Setup (React)
-
-    cd easycontext-frontend
-    npm install
-    npm start
-    App runs on: http://localhost:3000
-
-3️⃣ Ollama Setup
-
-    Downgrade Ollama to v0.6.8 (refer to official site/documentation)
-    Verify Version:
-    ollama --version  # Should return ollama version 0.6.8
-
-    Pull & Run CodeLLaMA:
-    ollama pull codellama:7b
-    ollama run codellama:7b
-
-4️⃣ Backend Setup (Flask)
-
-1. From project root
-   python -m venv venv
-2. Activate:
-   venv\Scripts\activate
-3. Install dependencies
-   pip install -r requirements.txt
-4. Run the server
-5. python app.py
-Flask runs on: http://127.0.0.1:5000
-
 ---
 
 ### 🧠 How to Use
