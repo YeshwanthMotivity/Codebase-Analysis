@@ -1,47 +1,55 @@
 # Codebase Analyst
  Codebase Analyst is a GenAI-powered tool that helps developers understand and query complex codebases using natural language. It uses a Retrieval-Augmented Generation (RAG) pipeline and CodeLLaMA to extract and  explain code from uploaded repositories intelligently.
+ 
+---
+### Features
+1. **Natural Language Interaction** – Ask questions about your codebase in plain English.
+2. **Context-Aware Answers** – Answers are derived directly from your codebase.
+3. **Zipped Repository Uploads** – Upload your codebase as a .zip file.
+4. **Intelligent File Filtering** – Skips unnecessary folders like __pycache__, .git, node_modules, etc.
+5. **RAG Architecture** – Combines retrieval and generation for accurate results.
 
-# Features
-1. Natural Language Interaction – Ask questions about your codebase in plain English.
-2. Context-Aware Answers – Answers are derived directly from your codebase.
-3. Zipped Repository Uploads – Upload your codebase as a .zip file.
-4. Intelligent File Filtering – Skips unnecessary folders like __pycache__, .git, node_modules, etc.
-5. RAG Architecture – Combines retrieval and generation for accurate results.
-
-# Architechture
+---
+### Architechture
 ![p1](https://github.com/user-attachments/assets/0712baf0-5a33-4d8c-8a5e-7579fad58186)
 
-# Tech Stack
-Layer	Technologies Used
-1. Frontend	React.js – For building responsive UI
-2. Backend	Flask – Lightweight Python server
-3. LLM Engine	CodeLLaMA (via Ollama) – Code understanding
-4. Vector Search	SentenceTransformers (MiniLM) – Semantic retrieval
-5. Chunking	Hugging Face Transformers – Token-based splitting
-6. Infrastructure	Ollama – Lightweight local LLM serving
+---
+### Tech Stack
 
-# Prerequisites
-1. Backend (Python)
+|        Layer       |       Technologies Used          |
+| ------------------ | -------------------------------  |
+| **Frontend**       | `React.js`                       |
+| **Backend**        | `Flask`                          |
+| **LLM Engine**     | `CodeLLaMA` (via Ollama)         |
+| **Vector Search**  | `SentenceTransformers` (MiniLM)  |
+| **Chunking**       | `Hugging Face Transformers`      |
+| **Infrastructure** | `Ollama`                         |
+
+---
+### Prerequisites
+**1. Backend (Python)**
    1. Python: 3.9+
    2. pip: For installing Python libraries
    3. Git: For cloning the repo
    4. Ollama: Local server for CodeLLaMA
    5. ⚠️ Important: Downgrade to Ollama v0.6.8 for compatibility with CodeLLaMA instruction-tuned models.
 
-2. Frontend (React)
+**2. Frontend (React)**
    1. Node.js
    2. npm
    3. Basic React knowledge
 
-3. Verify Installations
+**3. Verify Installations**
    1. python --version      # Should be 3.9+
    2. pip --version
    3. node --version
    4. npm --version
    5. ollama --version      # Should be v0.6.8
+      
+---
+### Project Structure
 
-# Project Structure
-
+```
 📂 1M-CODEBASE-ANALYSIST/
 │
 ├── 📂 easycontext_cpu/
@@ -55,9 +63,10 @@ Layer	Technologies Used
 │
 ├── 📂 easycontext-frontend/
 │   └── App.js
+```
+---
 
-
-# Setup & Run Instructions
+### Setup & Run Instructions
 
 1️⃣ Clone the Repository
 
@@ -93,7 +102,9 @@ Layer	Technologies Used
 5. python app.py
 Flask runs on: http://127.0.0.1:5000
 
-# 🧠 How to Use
+---
+
+### 🧠 How to Use
 1. 📤 Upload Codebase
     1. Click on "Choose File" under "Upload a text file"
     2. Select your .zip codebase (Only relevant files (like .py, .js, .html) will be processed)
@@ -104,7 +115,9 @@ Flask runs on: http://127.0.0.1:5000
       2. "What does the transform module do?"
    2. Click "Ask" to submit.
 
-# 🔁 What Happens Behind the Scenes
+---
+
+### 🔁 What Happens Behind the Scenes
 
 1. Unzipping: Uploaded zip is extracted.
 2. Filtering: Unwanted files are ignored.
@@ -117,6 +130,7 @@ Flask runs on: http://127.0.0.1:5000
 
 ⏳ Response time depends on codebase size.
 
-# 📬 Contact
+---
+### 📬 Contact
 For questions, feedback, or contributions:
 📧 yeshwanth.mudimala@motivitylabs.com
