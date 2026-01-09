@@ -1,0 +1,42 @@
+:root {
+  /* Default Light Theme */
+  --bg-deep: #F3F4F6;
+  --bg-slate: #FFFFFF;
+  --accent: #6366F1;
+  --accent-glow: rgba(99, 102, 241, 0.2);
+  --text-main: #111827;
+  --text-muted: #6B7280;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: #E5E7EB;
+  --radius: 12px;
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] {
+  --bg-deep: #0f172a;
+  --bg-slate: #1e293b;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.2);
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}

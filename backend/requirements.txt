@@ -8,3 +8,4 @@ seaborn
 sentence-transformers
 flask
 flask-cors
+requests

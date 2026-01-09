@@ -106,6 +106,7 @@ def chunk_text(text, chunk_size=4096, stride=2048, concat_chunks=False):
     input_ids = tokenizer.encode(text, truncation=False)
     chunks = []
 
+    print(f"[INFO] [Chunker] Input text length: {len(input_ids)} tokens")
     for i in range(0, len(input_ids), stride):
         chunk_ids = input_ids[i:i + chunk_size]
         if not chunk_ids:
@@ -122,6 +123,9 @@ def chunk_text(text, chunk_size=4096, stride=2048, concat_chunks=False):
             if i + 1 < len(chunks):
                 merged += "\n\n" + chunks[i + 1]
             merged_chunks.append(merged)
+        
+        print(f"[INFO] [Chunker] Created {len(merged_chunks)} chunks (Concat active).")
         return merged_chunks
 
+    print(f"[INFO] [Chunker] Split code into {len(chunks)} chunks.")
     return chunks

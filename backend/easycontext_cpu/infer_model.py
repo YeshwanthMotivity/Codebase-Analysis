@@ -489,25 +489,28 @@ def generate_answer(query, chunks, return_debug=False):
     prompt = build_prompt(context, query)  # same as before
     t0 = time.time()
     try:
-        print("🤖 Calling Ollama model (codellama)...")
+        print("[INFO] Calling Ollama model (qwen2.5-coder:7b)...")
         response = ollama.chat(
-            model='codellama:7b',
+            model='qwen2.5-coder:7b',
             messages=[{"role": "user", "content": prompt}],
             options={
                 "temperature": 0.3,
                 "top_p": 0.9,
-                "num_predict": 500
+                "num_predict": 500,
+                "num_ctx": 32768
             }
         )
         raw_output = response['message']['content']
         answer = clean_answer(raw_output)
         elapsed = time.time() - t0
-        print(f"✅ CodeLLaMA responded in {elapsed:.2f}s")
+        print(f"[SUCCESS] Qwen2.5-Coder responded in {elapsed:.2f}s")
         if return_debug:
             return answer, prompt, raw_output, elapsed
         return answer
     except Exception as e:
-        print("❌ CodeLLaMA generation failed:", e)
+        print("[ERROR] Qwen generation failed:", e)
+        with open("error_log.txt", "a") as f:
+            f.write(f"Error: {str(e)}\n")
         if return_debug:
             return "ERROR", prompt, str(e), 0.0
         return 'ERROR'

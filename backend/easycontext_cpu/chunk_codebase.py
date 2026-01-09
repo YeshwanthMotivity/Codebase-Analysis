@@ -21,10 +21,10 @@ def chunk_single_file(path, max_tokens=1024):
 
     try:
         if os.path.getsize(path) > MAX_FILE_SIZE:
-            print(f"⚠️ Skipped large file: {path}")
+            print(f"[WARN] Skipped large file: {path}")
             return []
     except Exception as e:
-        print(f"❌ Error checking size for {path}: {e}")
+        print(f"[ERROR] Error checking size for {path}: {e}")
         return []
 
     content = load_file(path)
@@ -35,16 +35,16 @@ def chunk_single_file(path, max_tokens=1024):
         chunks = chunk_text(content, chunk_size=max_tokens, stride=max_tokens // 2)
         return [f"[{path}]\n{chunk}" for chunk in chunks]
     except Exception as e:
-        print(f"❌ Failed to chunk {path}: {e}")
+        print(f"[ERROR] Failed to chunk {path}: {e}")
         return []
 
 def chunk_codebase(file_paths, max_tokens=1024):
-    print(f"📄 Chunking {len(file_paths)} files using {cpu_count()} CPU cores...")
+    print(f"[INFO] Chunking {len(file_paths)} files using {cpu_count()} CPU cores...")
     args = [(path, max_tokens) for path in file_paths]
 
     with Pool(processes=cpu_count()) as pool:
         all_chunks_nested = pool.starmap(chunk_single_file, args)
 
     all_chunks = [chunk for sublist in all_chunks_nested for chunk in sublist]
-    print(f"✅ Done. Total chunks: {len(all_chunks)}")
+    print(f"[SUCCESS] Done. Total chunks: {len(all_chunks)}")
     return all_chunks
