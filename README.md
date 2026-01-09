@@ -73,13 +73,6 @@ npm start
 4.  Ask questions like *"How does the authentication flow work?"* or *"Explain App.js"*.
 
 
-## 🤝 Contributions
-Contributions are welcome!
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Submit a pull request.
-
 ## 🙋‍♂️ Author
 
 • Mentor / Manager: Mr. Venkata Ramana Sudhakar Polavarapu
